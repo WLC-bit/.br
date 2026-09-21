@@ -1,199 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <script type='text/javascript' src='//exemplo-adsterra.js'></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Plataforma de Afiliados - Ganhe Dinheiro Online</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #1e293b;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #334155;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #10b981;
-        }
-
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #10b981;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .card {
-            background-color: #1e293b;
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid #334155;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #10b981;
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            color: #f8fafc;
-            margin-bottom: 0.5rem;
-        }
-
-        .card p {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #10b981;
-            margin-bottom: 1rem;
-        }
-
-        .btn-affiliate {
-            display: block;
-            text-align: center;
-            background-color: #10b981;
-            color: #0f172a;
-            font-weight: bold;
-            padding: 0.8rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .btn-affiliate:hover {
-            background-color: #059669;
-            color: #ffffff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #1e293b;
-            color: #64748b;
-            border-top: 1px solid #334155;
-            margin-top: 4rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MeuNegocioDigital: recomendações de cursos, finanças e ferramentas para evoluir online.">
+  <title>MeuNegocioDigital | Cursos e Ferramentas</title>
+  <!-- Cole abaixo o script real do seu provedor de anúncios (Adsterra, AdSense etc.).
+  <script async src="COLE_AQUI_O_SCRIPT_DO_PROVEDOR"></script>
+  -->
+  <style>
+    :root{--bg:#0f172a;--panel:#1e293b;--line:#334155;--text:#f8fafc;--muted:#cbd5e1;--green:#10b981;--green-dark:#059669}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+    body{background:linear-gradient(180deg,#0f172a,#111827);color:var(--text);font-family:Segoe UI,Tahoma,sans-serif;line-height:1.6}
+    .container{width:min(1100px,calc(100% - 2rem));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(30,41,59,.96);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.logo{color:var(--green);font-weight:800;font-size:1.35rem}
+    nav{display:flex;gap:1.25rem;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-weight:600}nav a:hover{color:var(--green)}
+    .hero{text-align:center;padding:5rem 1rem 4rem;background:radial-gradient(circle at top,rgba(16,185,129,.16),transparent 55%)}
+    .hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin-bottom:1rem}.hero p{max-width:680px;margin:0 auto 1.5rem;color:var(--muted);font-size:1.12rem}
+    .btn{display:inline-block;background:var(--green);color:#052e22;font-weight:800;padding:.8rem 1.1rem;border-radius:8px;text-decoration:none;transition:.2s}.btn:hover{background:var(--green-dark);color:white;transform:translateY(-2px)}
+    .ad-slot{width:min(728px,100%);min-height:90px;margin:1.5rem auto;padding:1rem;display:flex;align-items:center;justify-content:center;border:1px dashed #64748b;border-radius:8px;color:#94a3b8;font-size:.85rem;text-align:center}
+    .section{padding:3.5rem 0}.section h2{text-align:center;font-size:2rem;margin-bottom:.75rem}.section-intro{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 2rem}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;min-height:310px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:var(--green)}
+    .tag{display:inline-block;color:#bbf7d0;background:rgba(16,185,129,.12);border-radius:999px;padding:.25rem .6rem;font-size:.78rem;margin-bottom:.8rem}.card h3{font-size:1.3rem;margin-bottom:.5rem}.card p{color:var(--muted);margin-bottom:1.2rem}.price{color:#6ee7b7;font-weight:800;font-size:1.35rem;margin-bottom:1rem}
+    .about{background:#111f32}.about-box{max-width:800px;margin:auto;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:2rem}.about-box p{color:var(--muted);margin-top:.8rem}
+    footer{border-top:1px solid var(--line);padding:2rem 0;text-align:center;color:#94a3b8}footer a{color:#a7f3d0}.disclaimer{font-size:.8rem;margin-top:.8rem}
+    @media(max-width:600px){.nav{flex-direction:column;justify-content:center;padding:1rem 0}nav{justify-content:center;gap:.8rem;font-size:.9rem}.hero{padding-top:3.5rem}}
+  </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo">MeuNegocioDigital</div>
-        <nav>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>As Melhores Recomendações e Ferramentas</h1>
-        <p>Selecionei os melhores cursos e soluções digitais para te ajudar a evoluir e ter resultados de verdade na internet.</p>
-    </section>
-
-    <section id="produtos" class="products-grid">
-        <!-- Produto 1 -->
-        <div class="card">
-            <div>
-                <h3>Curso de Marketing Digital</h3>
-                <p>Aprenda a criar campanhas de sucesso e vender online do zero de forma simples.</p>
-            </div>
-            <div>
-                <div class="price">99,90 /O Mais Recomendado</div>
-                <!-- Substitua o # pelo seu link de afiliado (Hotmart, Kiwify, etc.) -->
-                <a href="https://pay.kiwify.com.br/vgA6iZB?afid=j0ToMbm7" target="_blank" class="btn-affiliate">Saber Mais</a>
-            </div>
-        </div>
-
-        <!-- Produto 2 -->
-        <div class="card">
-            <div>
-                <h3>Guia Prático de Finanças</h3>
-                <p>E-book completo focado em organização financeira e investimentos para iniciantes.</p>
-            </div>
-            <div>
-                <div class="price">98,50/ Melhor avaliado</div>
-                <!-- Substitua o # pelo seu link de afiliado -->
-                <a href="https://pay.kiwify.com.br/CI4y7F9?afid=fXlV6oVl" target="_blank" class="btn-affiliate">Saber Mais</a>
-            </div>
-        </div>
-
-        <!-- Produto 3 -->
-        <div class="card">
-            <div>
-                <h3>Ferramenta de Produtividade</h3>
-                <p>Otimize o seu dia a dia de trabalho com modelos e rotinas automatizadas.</p>
-            </div>
-            <div>
-                <div class="price">48,50 / economico</div>
-                <!-- Substitua o # pelo seu link de afiliado -->
-                <a href="https://pay.kiwify.com.br/CI4y7F9?afid=fXlV6oVl" target="_blank" class="btn-affiliate">Saber Mais</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 - Todos os direitos reservados.</p>
-    </footer>
-
+  <header><div class="container nav"><div class="logo">MeuNegocioDigital</div><nav aria-label="Navegação principal"><a href="#produtos">Produtos</a><a href="#sobre">Sobre</a><a href="#anuncios">Anúncios</a></nav></div></header>
+  <main>
+    <section class="hero"><div class="container"><h1>Ferramentas para evoluir no digital</h1><p>Recomendações de cursos, soluções e materiais práticos para ajudar você a aprender, organizar sua vida financeira e produzir melhor.</p><a class="btn" href="#produtos">Ver recomendações</a><div id="anuncios" class="ad-slot" aria-label="Espaço para anúncio">ESPAÇO PARA ANÚNCIO<br><small>Insira aqui o código do seu provedor de anúncios</small></div></div></section>
+    <section id="produtos" class="section"><div class="container"><h2>Produtos em destaque</h2><p class="section-intro">Confira os preços atuais e acesse os links de afiliado pelos botões abaixo.</p><div class="products-grid">
+      <article class="card"><div><span class="tag">Mais recomendado</span><h3>Curso de Marketing Digital</h3><p>Aprenda a criar campanhas de sucesso e vender online do zero de forma simples.</p></div><div><div class="price">R$ 99,90</div><a class="btn" href="https://pay.kiwify.com.br/vgA6iZB?afid=j0ToMbm7" target="_blank" rel="noopener noreferrer">Saber mais</a></div></article>
+      <article class="card"><div><span class="tag">Melhor avaliado</span><h3>Guia Prático de Finanças</h3><p>E-book completo para organização financeira e investimentos para iniciantes.</p></div><div><div class="price">R$ 98,50</div><a class="btn" href="https://pay.kiwify.com.br/CI4y7F9?afid=fXlV6oVl" target="_blank" rel="noopener noreferrer">Saber mais</a></div></article>
+      <article class="card"><div><span class="tag">Econômico</span><h3>Ferramenta de Produtividade</h3><p>Otimize seu dia a dia com modelos e rotinas automatizadas.</p></div><div><div class="price">R$ 48,50</div><a class="btn" href="https://pay.kiwify.com.br/CI4y7F9?afid=fXlV6oVl" target="_blank" rel="noopener noreferrer">Saber mais</a></div></article>
+    </div><div class="ad-slot">ESPAÇO PARA ANÚNCIO 728 × 90</div></div></section>
+    <section id="sobre" class="section about"><div class="container"><div class="about-box"><h2>Sobre o MeuNegocioDigital</h2><p>Olá! Eu sou o responsável pelo MeuNegocioDigital. Este projeto é administrado por mim como <strong>Microempreendedor Individual (MEI)</strong> e foi criado para reunir recomendações de produtos e ferramentas digitais que possam ajudar você a aprender e alcançar seus objetivos.</p><p>Alguns links desta página são links de afiliado. Posso receber uma comissão se você realizar uma compra, sem custo adicional para você. Os valores exibidos são os preços informados na publicação e podem ser alterados pela plataforma responsável.</p></div></div></section>
+  </main>
+  <footer><div class="container"><p>&copy; 2026 MeuNegocioDigital. Todos os direitos reservados.</p><p class="disclaimer">Conteúdo informativo. As condições finais da compra são apresentadas na página oficial de cada produto.</p></div></footer>
 </body>
 </html>
